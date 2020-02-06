@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=0, viewport-fit=cover">
+  <title>Ticker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="root">
+    <div class="ticker">
+      <div class="tunnel" id="league-tunnel">
+        <div id="league"></div>
+        <div id="spinner"></div>
+        <div id="empty">No Active Leagues Found</div>
+      </div>
+      <div id="stage"></div>
+      <div class="tunnel" id="logo-tunnel">
+        <div id="logo"></div>
+      </div>
+    </div>
+    <div id="error-message">Service Connection Error: Hang tight and we'll keep trying to reconnect...</div>
+    <div class="control">
+      <button id="stop-button">Pause</button>
+      <button id="start-button" disabled>Play</button>
+      <button id="reload-button">Reload</button>
+    </div>
+  </div>
+  <template id="match">
+    <div class="match">
+      <div class="teams">
+        <div class="home">
+          <div class="favorite">&starf;</div>
+          <div class="home_name"></div>
+        </div>
+        <div class="away">
+          <div class="favorite">&starf;</div>
+          <div class="away_name"></div>
+        </div>
+      </div>
+      <div class="info">
+        <div>
+          <div class="title">moneyline</div>
+          <div class="moneyline">
+            <div class="home_ml"></div>
+            <div class="away_ml"></div>
+          </div>
+        </div>
+        <div>
+          <div class="title">spread</div>
+          <div class="spread"></div>
+        </div>
+        <div>
+          <div class="title">total</div>
+          <div class="total"></div>
+        </div>
+      </div>
+      <div class="time">
+        <span class="time-day"></span>
+        <small>@</small>
+        <span class="time-hour"></span>
+      </div>
+    </div>
+  </template>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+  <script src="app.js"></script>
+</body>
+</html>
