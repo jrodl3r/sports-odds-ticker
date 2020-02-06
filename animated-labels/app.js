@@ -1,3 +1,5 @@
+/* https://github.com/jrodl3r/sports-odds-ticker */
+
 (function() {
   let app = {
     data: [],                 // data currently displayed
@@ -21,8 +23,6 @@
     startButton: document.getElementById('start-button'),
     reloadButton: document.getElementById('reload-button'),
 
-    // NOTE: since we're using CSS for animation we can safely use
-    //       setInterval to control the app lifecycle (without rAF).
     init: () => {
       if (app.isLoading) { app.initControls(); }
       if (app.isRunning) { clearInterval(app.isRunning); }
